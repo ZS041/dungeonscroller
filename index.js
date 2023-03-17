@@ -37,7 +37,9 @@ const backgroundLevel1 = new Sprite({
         window.requestAnimationFrame(animate)
       
         backgroundLevel1.draw()
-
+        collisionBlocks.forEach(collisionBlock => {
+            collisionBlock.draw()
+        })
 
         player.velocity.x=0
         if(keys.d.pressed)player.velocity.x=5
