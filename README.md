@@ -15,12 +15,12 @@ The game is live hosted at the link included. If you wish to develop or run the 
 - [ ] Create Sprites For Attack
 - [ ] Add Attack Function
 - [ ] Door Requirements
- - [ ] "Key" item
- - [ ] "Locked" doors
+  - [ ] "Key" item
+  - [ ] "Locked" doors
 - [ ] Enemy Class
- - [ ] Drop Key on Death
- - [ ] Enemy Hitpoints
- - [ ] Enemy Attack
+  - [ ] Drop Key on Death
+  - [ ] Enemy Hitpoints
+  - [ ] Enemy Attack
 
 ### In Progress
 
