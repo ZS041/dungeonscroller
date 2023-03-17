@@ -206,9 +206,9 @@ const overlay ={
         window.requestAnimationFrame(animate)
       
         background.draw()
-        collisionBlocks.forEach(collisionBlock => {
+        /*collisionBlocks.forEach(collisionBlock => {
             collisionBlock.draw()
-        })
+        })*/
 
         doors.forEach((door) => {
             door.draw()
