@@ -22,4 +22,5 @@ Array.prototype.createobjectsFrom2D = function(){
             }
         })
         })
+        return objects
 }
