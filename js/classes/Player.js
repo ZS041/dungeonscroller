@@ -1,8 +1,8 @@
 class Player extends Sprite {
     constructor({
-        collisionBlocks = [], imageSrc, frameRate
+        collisionBlocks = [], imageSrc, frameRate, animations
     }){
-        super({imageSrc, frameRate})
+        super({imageSrc, frameRate, animations})
         this.position = {
             x:200,
             y:200,
@@ -43,6 +43,13 @@ class Player extends Sprite {
         this.checkForVerticalCollisions()
     }
 
+    switchSprite(name){
+        if(this.image === this.animations[name].image) return
+        this.currentFrame = 0
+        this.image = this.animations[name].image
+        this.frameRate = this.animations[name].frameRate
+        this.frameBuffer = this.animations[name].frameBuffer
+    }
 
     updateHitbox(){
         this.hitbox = {
