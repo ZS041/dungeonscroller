@@ -4,7 +4,12 @@
     canvas.width = 64*16
     canvas.height = 64*9
 
-    
+
+
+
+    const parsedCollisions = collisionsLevel1.parse2D()
+        
+   const collisionBlocks =  parsedCollisions.createobjectsFrom2D()
 
 
 
