@@ -49,10 +49,30 @@ const backgroundLevel1 = new Sprite({
                 frameRate: 8,
                 frameBuffer: 4,
                 loop:true,
+            },
+            enterDoor:{
+                imageSrc:'./img/king/enterDoor.png',
+                frameRate: 8,
+                frameBuffer: 4,
+                loop:false,
             }
 
         }
     })
+
+    const doors = [
+        new Sprite({
+            position:{
+            x:767,
+            y:270,
+            },
+            imageSrc: './img/doorOpen.png',
+            frameRate: 5,
+            frameBuffer: 5,
+            loop: false,
+            autoplay: false,
+        })
+    ]
   
 
  
@@ -77,19 +97,11 @@ const backgroundLevel1 = new Sprite({
             collisionBlock.draw()
         })
 
-        player.velocity.x=0
-        if(keys.d.pressed){
-            player.switchSprite('runRight')
-        player.velocity.x=5
-    player.lastDirection = 'right'}
-        else if (keys.a.pressed) {
-            player.switchSprite('runLeft')
-            player.velocity.x=-5
-            player.lastDirection = 'left'}
-        else {
-            if(player.lastDirection === 'left')player.switchSprite('idleLeft')
-            else player.switchSprite('idleRight')
-        }
+        doors.forEach((door) => {
+            door.draw()
+        })
+
+        player.handleInput(keys)
         player.draw()
         player.update()
       
