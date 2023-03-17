@@ -11,7 +11,6 @@ The game is live hosted at the link included. If you wish to develop or run the 
 
 ### Todo
 
-- [ ] Hitpoints
 - [ ] Create Sprites For Attack
 - [ ] Add Attack Function
 - [ ] Door Requirements
