@@ -52,7 +52,7 @@
                         opacity: 1,
                         onComplete:() => {
                             level++
-                            if (level === 3) level = 1
+                            if (level === 4) level = 1
                             levels[level].init()
                             player.switchSprite('idleRight')
                             player.preventInput = false
@@ -76,7 +76,7 @@
         
             collisionBlocks =  parsedCollisions.createobjectsFrom2D()
             player.collisionBlocks = collisionBlocks
-
+            if(player.currentAnimation)player.currentAnimation.isActive = false
             background = new Sprite({
         position:{
             x:0,
@@ -133,7 +133,41 @@
     ]
 
             }
+        },
+        3: {
+            init: () => {
+            parsedCollisions = collisionsLevel3.parse2D()
+        
+            collisionBlocks =  parsedCollisions.createobjectsFrom2D()
+            player.collisionBlocks = collisionBlocks
+            player.position.x = 750
+            player.position.y = 230
+            if(player.currentAnimation)player.currentAnimation.isActive = false
+
+            background = new Sprite({
+        position:{
+            x:0,
+            y:0,
+        },
+        imageSrc:'./img/backgroundLevel3.png'
+    })
+    doors =  [
+        new Sprite({
+            position:{
+            x:176,
+            y:335,
+            },
+            imageSrc: './img/doorOpen.png',
+            frameRate: 5,
+            frameBuffer: 5,
+            loop: false,
+            autoplay: false,
+        })
+    ]
+
+            }
         }
+
 
         
     }
@@ -172,12 +206,9 @@ const overlay ={
         window.requestAnimationFrame(animate)
       
         background.draw()
-       /*
-       //No longer render collision blocks
-       
-       collisionBlocks.forEach(collisionBlock => {
+        collisionBlocks.forEach(collisionBlock => {
             collisionBlock.draw()
-        })*/
+        })
 
         doors.forEach((door) => {
             door.draw()
