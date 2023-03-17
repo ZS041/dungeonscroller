@@ -3,7 +3,7 @@ Javascript Dungeon Crawler with custom physics
 
 ## How to Play
 
-The game is live hosted at the link included. If you wish to develop or run the game locally, you can clone the repository. No frameworks or packages are needed, all scripts are imported or included.
+The game is live hosted at the link included. If you wish to develop or run the game locally, you can clone the repository. No frameworks or packages are needed, all scripts are included.
 
 
 
